@@ -2,7 +2,7 @@
 ## Андреев Артём M33001
 
 ### Stages:
-1) Голый html - **[waiting for review]**
+1) Голый html - **[done]**
 2) Базовые стили css - **[coming soon]**
 3) Выравниевание элементов - **[coming later]**
 4) JavaScript - **[coming later]**
