@@ -1,0 +1,50 @@
+.navigationMenu {
+    position: fixed;
+    width: 22%;
+    height: 100vh;
+    background: #FFEC5C;
+    font-size: 0.9em;
+
+    border-right: #FF5A33 solid 2px;
+    border-top: #FF5A33 solid 2px;
+}
+
+.navigationMenu__pageList {
+    position: relative;
+    margin: auto 0;
+    text-align: left;
+    top: 50%;
+    font-weight: bold;
+    list-style: none;
+}
+
+.navigationMenu__pageList li {
+    position: relative;
+    margin: 3.2em 0;
+}
+
+.navigationMenu__pageList a {
+    line-height: 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    display: block;
+    color: black;
+}
+.navigationMenu__pageList a:hover {
+    color: #FF5A33;
+}
+
+.navigationMenu__expandButton {
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #FF5A33;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.navigationMenu__expandButton:hover {
+    background-color: #44803F;
+}
