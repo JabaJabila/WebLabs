@@ -3,21 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title>Don Jabon - МЕНЮ</title>
+    <link rel="stylesheet" href="../styles/index.css">
   </head>
   <body>
-    <header>
-      <img src="../assets/logo.jpg" alt="Лого" width="100" height="100">
-      <h1>Don Jabon</h1>
+    <header class="mainHeader">
+      <div class="mainHeader__logo-and-text">
+        <img class="mainHeader__logoImg" src="../assets/logo.jpg" alt="author logo">
+        <img class="mainHeader__logoText" src="../assets/logo_transparent_new.png" alt="logo text">
+      </div>
     </header>
 
     <main>
-      <aside>
-        <button>==</button>
-        <nav>
-          <ul>
-            <li><a href="menu.html" target="_self">Меню</a></li>
-            <li><a href="about_us.html" target="_self">О нас</a></li>
-            <li><a href="sales.html" target="_self">Скидки и акции</a></li>
+      <aside class="navigationMenu">
+        <button class="navigationMenu__expandButton">☰</button>
+        <nav class="navigationMenu__navigationPages">
+          <ul class="navigationMenu__pageList">
+            <li class="navigationMenu__navigationLink"><a href="menu.html" target="_self">Меню</a></li>
+            <li class="navigationMenu__navigationLink"><a href="about_us.html" target="_self">О нас</a></li>
+            <li class="navigationMenu__navigationLink"><a href="sales.html" target="_self">Скидки и акции</a></li>
           </ul>
         </nav>
       </aside>
@@ -78,10 +81,9 @@
       </section>
     </main>
 
-    <footer>
-      <hr>
-      <p>©All right reserved, 2022.</p>
-      <p>Разработчик: <a href="https://github.com/JabaJabila" target="_blank">Артём Андреев (aka Jaba Jabila)</a></p>
+    <footer class="mainFooter">
+      <span class="mainFooter__info">Разработчик: <a href="https://github.com/JabaJabila" target="_blank">Артём Андреев (aka Jaba Jabila)</a></span>
+      <span class="mainFooter__copyright">©All rights reserved, 2022.</span>
     </footer>
   </body>
 </html>
