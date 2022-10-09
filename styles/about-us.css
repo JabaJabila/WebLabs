@@ -1,0 +1,63 @@
+.about-us {
+
+}
+
+.about-us__main-text {
+    margin: 0 30% 0 30%;
+}
+
+.about-us__main-text h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #FF5A33;
+    text-shadow: 1px 1px 5px gainsboro;
+}
+
+.about-us__main-text p {
+    line-height: 1.3;
+    text-indent: 1.5rem;
+}
+
+.about-us__quote {
+    margin: 2% 27% 0 27%;
+    font-family: Helvetica Nue, Helvetica, Arial, serif;
+    text-align: center;
+    border: #FF5A33 solid 3px;
+    border-radius: 30%;
+    padding: 1% 2% 2% 2%;
+}
+
+.about-us__quote p {
+    font-size: 1.2rem;
+    line-height: 0.9rem;
+    font-family: URW Chancery L, cursive;
+}
+
+.about-us__quote cite {
+    margin-left: 50%;
+    font-style: italic;
+}
+
+.address__block {
+    margin: 5% 28% 5% 28%;
+}
+
+.address__block h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #FF5A33;
+    text-shadow: 1px 1px 5px gainsboro;
+}
+
+.address__map {
+    display: block;
+    margin: auto;
+}
+
+.address__block p {
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #FF5A33;
+}

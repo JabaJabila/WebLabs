@@ -1,6 +1,7 @@
 @import "header.css";
 @import "footer.css";
 @import "navigation.css";
+@import "about-us.css";
 
 body {
     padding: 0;
