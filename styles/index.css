@@ -1,0 +1,14 @@
+@import "header.css";
+@import "footer.css";
+@import "navigation.css";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, serif;
+}
+
+::selection {
+    color: #FF5A33;
+    background: #FFEC5C;
+}

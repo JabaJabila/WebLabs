@@ -1,0 +1,28 @@
+.mainHeader {
+    background: linear-gradient(#FFEC5C, #EDDB55);
+    border-radius: 0 0 20% 20%;
+    filter: drop-shadow(0px 10px 5px gainsboro);
+    border-bottom: #FF5A33 solid 3px;
+
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.mainHeader__logoText {
+    margin-left: 10px;
+}
+
+.mainHeader__logoImg {
+    width: 7%;
+    height: 7%;
+    border-radius: 100%;
+    border: 3px dashed #FF5A33;
+    margin: 6px 10px;
+}
+
+.mainHeader__logo-and-text {
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+}
