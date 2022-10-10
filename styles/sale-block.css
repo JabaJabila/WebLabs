@@ -1,0 +1,35 @@
+.sales_block__unit {
+    border: #FF5A33 solid 3px;
+    border-radius: 20px;
+
+    margin: 5% 25% 5% 25%;
+    padding: 0.2% 1%;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../assets/sale_background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.sales_block__unit h2 {
+    text-align: center;
+    font-family: URW Chancery L, cursive;
+}
+
+.sales_block__unit-body {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.sales_block__unit span.sales_block__unit-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+.sales_block__unit-text span.sale_keywords {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: crimson;
+    margin-top: 15%;
+    text-shadow: gainsboro 1px 1px 5px;
+}
