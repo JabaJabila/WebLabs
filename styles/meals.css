@@ -1,0 +1,41 @@
+.meal-block__food-category {
+    margin: 5% 27% 5% 27%;
+    padding: 0.2% 1%;
+
+    border: #FF5A33 solid 3px;
+    border-radius: 20px;
+}
+
+.meal-block__food-category h2 {
+    font-weight: bold;
+    color: #FF5A33;
+    text-shadow: gainsboro 1px 1px 5px;
+    text-align: center;
+}
+
+.meal-block__horizontal-carousel {
+
+}
+
+.meal-block__food_frame {
+    display: inline-block;
+    margin: 1% 3% 1% 3%;
+    width: 23%;
+}
+
+
+.meal-block__food_frame h3 {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.meal-block__food_frame img {
+    height: 120px;
+    width: 120px;
+    border: #FF5A33 dashed 2px;
+    border-radius: 5px;
+    position: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
