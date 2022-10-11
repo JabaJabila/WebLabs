@@ -3,6 +3,8 @@
 @import "navigation.css";
 @import "about-us.css";
 @import "sale-block.css";
+@import "meals.css";
+@import "order.css";
 
 body {
     padding: 0;
