@@ -1,9 +1,10 @@
 .about-us {
-
 }
 
 .about-us__main-text {
     margin: 0 30% 0 30%;
+    background-color: whitesmoke;
+    box-shadow: 0 0 50px 50px whitesmoke;
 }
 
 .about-us__main-text h2 {
@@ -25,6 +26,8 @@
     border: #FF5A33 solid 3px;
     border-radius: 30%;
     padding: 1% 2% 2% 2%;
+    background-color: whitesmoke;
+    box-shadow: 0 0 30px 20px whitesmoke;
 }
 
 .about-us__quote p {
@@ -40,6 +43,8 @@
 
 .address__block {
     margin: 5% 28% 5% 28%;
+    background-color: whitesmoke;
+    box-shadow: 0 0 50px 50px whitesmoke;
 }
 
 .address__block h2 {

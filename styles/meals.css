@@ -4,6 +4,8 @@
 
     border: #FF5A33 solid 3px;
     border-radius: 20px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 50px 50px whitesmoke;
 }
 
 .meal-block__food-category h2 {

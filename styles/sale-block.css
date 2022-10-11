@@ -8,6 +8,8 @@
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../assets/sale_background.jpg");
     background-position: center;
     background-size: cover;
+    background-color: whitesmoke;
+    box-shadow: 0 0 50px 50px whitesmoke;
 }
 
 .sales_block__unit h2 {
