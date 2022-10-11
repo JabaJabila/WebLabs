@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Don Jabon</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Don Jabon - революция в сфере шавермы. В нашем заведении вы сможете отведать вкуснейшую шаверму из качественных и свежих продуктов.">
+    <meta charset="UTF-8">
+    <title>Don Jabon - О НАС</title>
+    <link rel="stylesheet" href="styles/index.css">
   </head>
   <body>
-    <h1>Внимание!</h1>
-    <p>Вы переходи на сайт, созданный в образовательных целях.</p>
-    <p><strong>Фотографии еды, интерьеров, рецепты и прочий контент взят из открытых источников!</strong></p>
-    <a href="pages/menu.html" target="_self">Перейти к содержимому</a>
+    <header class="mainHeader">
+      <div class="mainHeader__logo-and-text">
+        <img class="mainHeader__logoImg" src="assets/logo.jpg" alt="author logo">
+        <img class="mainHeader__logoText" src="assets/logo_transparent_new.png" alt="logo text">
+      </div>
+    </header>
+
+    <main>
+      <aside class="navigationMenu">
+        <button class="navigationMenu__expandButton">☰</button>
+        <nav class="navigationMenu__navigationPages">
+          <ul class="navigationMenu__pageList">
+            <li class="navigationMenu__navigationLink"><a href="pages/menu.html" target="_self">Меню</a></li>
+            <li class="navigationMenu__navigationLink"><a href="index.html" target="_self">О нас</a></li>
+            <li class="navigationMenu__navigationLink"><a href="pages/sales.html" target="_self">Скидки и акции</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="about-us">
+        <div class="about-us__main-text">
+          <h2>Лучшая шаверма Питера</h2>
+          <p>Даже самый злостный критик поистине оценит нашу шаверму, потому что наши рецепты прорабатывались при участии главного шавермоеда нашей вселенной - Юрием Хованским!</p>
+          <p>Мы специализируемся лишь только на шаверме и простых закусках, поэтому готовы отдавать заказы быстро. Вы также можете попросить приготовить для Вас шаверму по вашему рецепту, воспользовавшись нашим конструктором шавермы <em>(Скоро будет)</em>.</p>
+          <p>Сильные заявления? Приходите к нам в заведение и убедитесь во всём сами.</p>
+        </div>
+        <blockquote class="about-us__quote">
+          <p>"Папочка всех накормит!"</p>
+          <cite>Виктор Баринов (наш шеф)</cite>
+        </blockquote>
+      </section>
+
+      <section class="address">
+        <div class="address__block">
+          <h2>Мы на карте:</h2>
+            <div class="address__map">
+              <iframe width="600" height="500" src="https://maps.google.com/maps?q=%D0%9A%D1%83%D0%BF%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2025&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+          <p>г. Санкт-Петербург, Купчинская улица дом 25</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mainFooter">
+      <span class="mainFooter__info">Разработчик: <a href="https://github.com/JabaJabila" target="_blank">Артём Андреев (aka Jaba Jabila)</a></span>
+      <span class="mainFooter__copyright">©All rights reserved, 2022.</span>
+    </footer>
   </body>
 </html>
