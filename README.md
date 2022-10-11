@@ -3,7 +3,7 @@
 
 ### Stages:
 1) Голый html - **[done]**
-2) Базовые стили css - *[done]**
+2) Базовые стили css - **[done]**
 3) Выравниевание элементов - **[coming soon]**
 4) JavaScript - **[coming later]**
 5) Run-time разметка - **[coming later]**
