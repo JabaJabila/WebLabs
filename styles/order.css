@@ -1,16 +1,19 @@
 .order__container {
     font-family: Bradley Hand, cursive;
-    color: #FF5A33;
     margin-left: 75%;
     height: 20%;
-    padding: 1%;
+    padding: 1% 1% 1% 4%;
     background-color: whitesmoke;
     box-shadow: 0 0 30px 20px whitesmoke;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../assets/paper-pattern.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 
 .order__container h2 {
     text-align: center;
     font-size: 1.2rem;
+    color: #FF5A33;
 }
 
 .order__container dl {
@@ -39,26 +42,30 @@
     width: 80%;
 }
 
+.order__container span.order__total {
+    font-weight: bold;
+}
+
 .order__container button#make-order {
     width: 80%;
     height: 30px;
     margin: 5% 10% 1% 10%;
-    background-color: rgba(0, 0, 0, 0);
     border: #FF5A33 solid 3px;
     border-radius: 10px;
     color: #FF5A33;
+    background-color: #FFEC5C;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 9px lightgray;
+    box-shadow: 0 9px #EDDB55;
 }
 
 .order__container button#make-order:hover {
-    background-color: gainsboro;
+    background-color: #EDDB55;
 }
 
 .order__container button#make-order:active {
-    box-shadow: 0 5px lightgray;
+    box-shadow: 0 5px #EDDB55;
     transform: translateY(4px);
 }
