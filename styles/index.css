@@ -6,6 +6,14 @@
 @import "meals.css";
 @import "order.css";
 
+:root {
+    --main-bg-color: #FFEC5C;
+    --main-el-color: #FF5A33;
+    --extra-color: #44803F;
+    --secondary-bg-color: #EDDB55;
+    --keyword-color: crimson;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -14,6 +22,6 @@ body {
 }
 
 ::selection {
-    color: #FF5A33;
-    background: #FFEC5C;
+    color: var(--main-el-color);
+    background: var(--main-bg-color);
 }

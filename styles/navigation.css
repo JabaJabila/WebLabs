@@ -2,11 +2,11 @@
     position: fixed;
     width: 22%;
     height: 100vh;
-    background: #FFEC5C;
+    background: var(--main-bg-color);
     font-size: 0.9em;
 
-    border-right: #FF5A33 solid 2px;
-    border-top: #FF5A33 solid 2px;
+    border-right: var(--main-el-color) solid 2px;
+    border-top: var(--main-el-color) solid 2px;
 }
 
 .navigationMenu__pageList {
@@ -32,19 +32,19 @@
     color: black;
 }
 .navigationMenu__pageList a:hover {
-    color: #FF5A33;
+    color: var(--main-el-color);
 }
 
 .navigationMenu__expandButton {
     margin: 5px;
     font-size: 20px;
     cursor: pointer;
-    background-color: #FF5A33;
+    background-color: var(--main-el-color);
     color: white;
     padding: 10px 15px;
     border: none;
 }
 
 .navigationMenu__expandButton:hover {
-    background-color: #44803F;
+    background-color: var(--extra-color);
 }

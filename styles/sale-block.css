@@ -1,5 +1,5 @@
 .sales_block__unit {
-    border: #FF5A33 solid 3px;
+    border: var(--main-el-color) solid 3px;
     border-radius: 20px;
 
     margin: 5% 25% 5% 25%;
@@ -31,7 +31,7 @@
 .sales_block__unit-text span.sale_keywords {
     font-size: 1.1rem;
     font-weight: bold;
-    color: crimson;
+    color: var(--keyword-color);
     margin-top: 15%;
     text-shadow: gainsboro 1px 1px 5px;
 }
