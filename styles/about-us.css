@@ -10,7 +10,7 @@
 .about-us__main-text h2 {
     text-align: center;
     font-size: 1.5rem;
-    color: #FF5A33;
+    color: var(--main-el-color);
     text-shadow: 1px 1px 5px gainsboro;
 }
 
@@ -23,7 +23,7 @@
     margin: 2% 27% 0 27%;
     font-family: Helvetica Nue, Helvetica, Arial, serif;
     text-align: center;
-    border: #FF5A33 solid 3px;
+    border: var(--main-el-color) solid 3px;
     border-radius: 30%;
     padding: 1% 2% 2% 2%;
     background-color: whitesmoke;
@@ -51,7 +51,7 @@
 .address__block h2 {
     text-align: center;
     font-size: 1.5rem;
-    color: #FF5A33;
+    color: var(--main-el-color);
     text-shadow: 1px 1px 5px gainsboro;
 }
 
@@ -65,5 +65,5 @@
     font-style: italic;
     font-weight: bold;
     font-size: 0.9rem;
-    color: #FF5A33;
+    color: var(--main-el-color);
 }

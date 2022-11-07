@@ -2,7 +2,7 @@
     margin: 5% 27% 5% 27%;
     padding: 0.2% 1%;
 
-    border: #FF5A33 solid 3px;
+    border: var(--main-el-color) solid 3px;
     border-radius: 20px;
     background-color: whitesmoke;
     box-shadow: 0 0 50px 50px whitesmoke;
@@ -10,7 +10,7 @@
 
 .meal-block__food-category h2 {
     font-weight: bold;
-    color: #FF5A33;
+    color: var(--main-el-color);
     text-shadow: gainsboro 1px 1px 5px;
     text-align: center;
 }
@@ -34,7 +34,7 @@
 .meal-block__food_frame img {
     height: 120px;
     width: 120px;
-    border: #FF5A33 dashed 2px;
+    border: var(--main-el-color) dashed 2px;
     border-radius: 5px;
     position: center;
     margin: auto;

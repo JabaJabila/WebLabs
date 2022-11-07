@@ -1,8 +1,8 @@
 .mainFooter {
-    background: linear-gradient(#EDDB55, #FFEC5C);
+    background: linear-gradient(#EDDB55, var(--main-bg-color));
     border-radius: 20% 20% 0 0;
     font-family: Consolas, monospace;
-    border-top: #FF5A33 solid 3px;
+    border-top: var(--main-el-color) solid 3px;
 
     position: fixed;
     bottom: 0;
@@ -27,5 +27,5 @@
 }
 
 .mainFooter__info a:hover {
-    color: #FF5A33;
+    color: var(--main-el-color);
 }
