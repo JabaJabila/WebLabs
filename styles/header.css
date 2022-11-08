@@ -7,22 +7,28 @@
     position: relative;
     top: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .mainHeader__logoText {
-    margin-left: 10px;
+    max-width: 200px;
+    min-width: 100px;
 }
 
 .mainHeader__logoImg {
-    width: 7%;
-    height: 7%;
     border-radius: 100%;
     border: 3px dashed var(--main-el-color);
     margin: 6px 10px;
+    width: 7%;
+    max-width: 200px;
+    min-width: 100px;
 }
 
-.mainHeader__logo-and-text {
-    display: flex;
-    justify-content: center;
-    padding-top: 3px;
+@media screen and (max-width: 400px) {
+    .mainHeader__logoText { visibility: hidden }
+}
+
+@media screen and (max-width: 320px) {
+    .mainHeader { visibility: hidden; display: none }
 }

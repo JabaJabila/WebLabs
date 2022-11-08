@@ -8,16 +8,18 @@
     bottom: 0;
     width: 100%;
     height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
 }
 
 .mainFooter__copyright {
-    float: right;
     margin-top: 10px;
     margin-right: 20px;
+    font-size: 1rem;
 }
 
 .mainFooter__info {
-    float: left;
     margin-top: 10px;
     margin-left: 20px;
 }
@@ -28,4 +30,12 @@
 
 .mainFooter__info a:hover {
     color: var(--main-el-color);
+}
+
+@media screen and (max-width: 800px) {
+    .mainFooter { visibility: hidden }
+}
+
+@media screen and (max-height: 300px) {
+    .mainFooter { visibility: hidden }
 }

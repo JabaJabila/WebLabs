@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Don Jabon - О НАС</title>
     <link rel="stylesheet" href="styles/index.css">
   </head>
@@ -13,18 +14,18 @@
       </div>
     </header>
 
-    <main>
-      <aside class="navigationMenu">
-        <button class="navigationMenu__expandButton">☰</button>
-        <nav class="navigationMenu__navigationPages">
-          <ul class="navigationMenu__pageList">
-            <li class="navigationMenu__navigationLink"><a href="pages/menu.html" target="_self">Меню</a></li>
-            <li class="navigationMenu__navigationLink"><a href="index.html" target="_self">О нас</a></li>
-            <li class="navigationMenu__navigationLink"><a href="pages/sales.html" target="_self">Скидки и акции</a></li>
-          </ul>
-        </nav>
-      </aside>
+    <aside class="navigationMenu">
+      <button class="navigationMenu__expandButton">☰</button>
+      <nav class="navigationMenu__navigationPages">
+        <ul class="navigationMenu__pageList">
+          <li class="navigationMenu__navigationLink"><a href="pages/menu.html" target="_self">Меню</a></li>
+          <li class="navigationMenu__navigationLink"><a href="index.html" target="_self">О нас</a></li>
+          <li class="navigationMenu__navigationLink"><a href="pages/sales.html" target="_self">Скидки и акции</a></li>
+        </ul>
+      </nav>
+    </aside>
 
+    <main id="about-us-page">
       <section class="about-us">
         <div class="about-us__main-text">
           <h2>Лучшая шаверма Питера</h2>
@@ -32,10 +33,12 @@
           <p>Мы специализируемся лишь только на шаверме и простых закусках, поэтому готовы отдавать заказы быстро. Вы также можете попросить приготовить для Вас шаверму по вашему рецепту, воспользовавшись нашим конструктором шавермы <em>(Скоро будет)</em>.</p>
           <p>Сильные заявления? Приходите к нам в заведение и убедитесь во всём сами.</p>
         </div>
-        <blockquote class="about-us__quote">
-          <p>"Папочка всех накормит!"</p>
-          <cite>Виктор Баринов (наш шеф)</cite>
-        </blockquote>
+        <div class="about-us__quote">
+          <blockquote>
+            <p>"Папочка всех накормит!"</p>
+            <cite>Виктор Баринов (наш шеф)</cite>
+          </blockquote>
+        </div>
       </section>
 
       <section class="address">

@@ -1,8 +1,20 @@
+#about-us-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .about-us {
+    width: 50%;
+    margin-bottom: 5%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-us__main-text {
-    margin: 0 30% 0 30%;
     background-color: whitesmoke;
     box-shadow: 0 0 50px 50px whitesmoke;
 }
@@ -20,17 +32,21 @@
 }
 
 .about-us__quote {
-    margin: 2% 27% 0 27%;
-    font-family: Helvetica Nue, Helvetica, Arial, serif;
+    max-width: 800px;
     text-align: center;
+    font-family: Helvetica Nue, Helvetica, Arial, serif;
     border: var(--main-el-color) solid 3px;
     border-radius: 30%;
     padding: 1% 2% 2% 2%;
     background-color: whitesmoke;
     box-shadow: 0 0 30px 20px whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
 }
 
 .about-us__quote p {
+    text-align: center;
     font-size: 1.2rem;
     line-height: 0.9rem;
     font-family: URW Chancery L, cursive;
@@ -38,14 +54,15 @@
 }
 
 .about-us__quote cite {
-    margin-left: 50%;
+    font-size: 1rem;
+    margin-right: 35px;
     font-style: italic;
 }
 
 .address__block {
-    margin: 5% 28% 5% 28%;
     background-color: whitesmoke;
     box-shadow: 0 0 50px 50px whitesmoke;
+    margin-bottom: 10%;
 }
 
 .address__block h2 {
@@ -56,14 +73,41 @@
 }
 
 .address__map {
-    display: block;
-    margin: auto;
+    display: flex;
+    align-content: center;
 }
 
 .address__block p {
-    text-align: right;
+    text-align: center;
+    margin-left: 35%;
     font-style: italic;
     font-weight: bold;
     font-size: 0.9rem;
     color: var(--main-el-color);
+}
+
+@media screen and (max-width: 600px) {
+    p.about-us__quote {
+        margin-right: 10%;
+    }
+
+    .address__map { display: none }
+
+    .address__block {
+        box-shadow: 0 0 25px 25px whitesmoke;
+    }
+
+    .address__block p {
+        margin-left: 0;
+    }
+
+    .about-us__quote p {
+        line-height: 1em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .about-us {
+        width: 80%;
+    }
 }
