@@ -1,8 +1,16 @@
+.order {
+    width: 20%;
+    margin-top: 2%;
+}
+
+.order #hidden {
+    visibility: hidden;
+}
+
 .order__container {
+    margin-right: 10px;
     font-family: Bradley Hand, cursive;
-    margin-left: 75%;
-    height: 20%;
-    padding: 1% 1% 1% 4%;
+    padding: 0 1% 5% 48px;
     background-color: whitesmoke;
     box-shadow: 0 0 30px 20px whitesmoke;
     background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../assets/paper-pattern.jpg");

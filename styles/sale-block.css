@@ -1,19 +1,29 @@
+.sales_block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .sales_block__unit {
     border: var(--main-el-color) solid 3px;
     border-radius: 20px;
-
-    margin: 5% 25% 5% 25%;
     padding: 0.2% 1%;
+    margin: 40px 10px;
 
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../assets/sale_background.jpg");
     background-position: center;
     background-size: cover;
     background-color: whitesmoke;
     box-shadow: 0 0 50px 50px whitesmoke;
+    width: 50%;
+    max-width: 1000px;
 }
 
 .sales_block__unit h2 {
     text-align: center;
+    font-size: 1.4rem;
     font-family: URW Chancery L, cursive;
 }
 
@@ -34,4 +44,10 @@
     color: var(--keyword-color);
     margin-top: 15%;
     text-shadow: gainsboro 1px 1px 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .sales_block__unit {
+        width: 80%;
+    }
 }
