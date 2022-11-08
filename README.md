@@ -4,8 +4,8 @@
 ### Stages:
 1) Голый html - **[done]**
 2) Базовые стили css - **[done]**
-3) Выравниевание элементов - **[coming soon]**
-4) JavaScript - **[coming later]**
+3) Выравниевание элементов - **[done]**
+4) JavaScript - **[coming soon]**
 5) Run-time разметка - **[coming later]**
 6) Чё то с promise - **[coming later]**
 7) Чё то продвинутое - **[coming later]**
