@@ -23,13 +23,6 @@ body {
     flex-direction: column;
 }
 
-.menu-page__container {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 ::selection {
     color: var(--main-el-color);
     background: var(--main-bg-color);

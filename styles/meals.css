@@ -1,6 +1,7 @@
 .meal-block {
     width: 50%;
     margin-bottom: 2%;
+    max-width: 800px;
 }
 
 .meal-block__food-category {
@@ -44,4 +45,15 @@
     margin: auto;
     display: flex;
     justify-content: center;
+}
+
+.menu-page__container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    .meal-block { width: 80%; }
 }
