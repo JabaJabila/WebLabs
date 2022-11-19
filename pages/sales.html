@@ -6,6 +6,7 @@
     <title>Don Jabon - АКЦИИ</title>
     <link rel="stylesheet" href="../styles/index.css">
     <script src="../scripts/loading_time.js"></script>
+    <script src="../scripts/navigation_toggle.js"></script>
   </head>
   <body>
     <header class="mainHeader">
@@ -15,15 +16,17 @@
       </div>
     </header>
 
-    <aside class="navigationMenu">
-      <button class="navigationMenu__expandButton">☰</button>
-      <nav class="navigationMenu__navigationPages">
-        <ul class="navigationMenu__pageList">
-          <li class="navigationMenu__navigationLink"><a href="menu.html" target="_self">Меню</a></li>
-          <li class="navigationMenu__navigationLink"><a href="../index.html" target="_self">О нас</a></li>
-          <li class="navigationMenu__navigationLink"><a href="sales.html" target="_self">Скидки и акции</a></li>
-        </ul>
-      </nav>
+    <aside class="navigationMenu__container navigationMenu__container_deactivated" id="main_navigation">
+      <button class="navigationMenu__expandButton" id="hamburger" onclick="toggle_hamburger()">☰</button>
+      <div class="navigationMenu__navigation navigationMenu__navigation_deactivated">
+        <nav class="navigationMenu__navigationPages">
+          <ul class="navigationMenu__pageList">
+            <li class="navigationMenu__navigationLink"><a href="menu.html" target="_self">Меню</a></li>
+            <li class="navigationMenu__navigationLink"><a href="../index.html" target="_self">О нас</a></li>
+            <li class="navigationMenu__navigationLink"><a href="sales.html" target="_self">Скидки и акции</a></li>
+          </ul>
+        </nav>
+      </div>
     </aside>
 
     <main>

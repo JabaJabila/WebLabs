@@ -4,8 +4,9 @@
     max-width: 350px;
 }
 
-.order #hidden {
+#hidden {
     visibility: hidden;
+    display: none;
 }
 
 .order__container {
