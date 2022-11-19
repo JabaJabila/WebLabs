@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/index.css">
     <script src="../scripts/loading_time.js"></script>
     <script src="../scripts/navigation_toggle.js"></script>
+    <script src="../scripts/page_locator.js"></script>
   </head>
   <body>
     <header class="mainHeader">
@@ -16,14 +17,14 @@
       </div>
     </header>
 
-    <aside class="navigationMenu__container navigationMenu__container_deactivated" id="main_navigation">
+    <aside class="navigationMenu__container navigationMenu__container_active" id="main_navigation">
       <button class="navigationMenu__expandButton" id="hamburger" onclick="toggle_hamburger()">☰</button>
-      <div class="navigationMenu__navigation navigationMenu__navigation_deactivated">
+      <div class="navigationMenu__navigation navigationMenu__navigation_active">
         <nav class="navigationMenu__navigationPages">
           <ul class="navigationMenu__pageList">
-            <li class="navigationMenu__navigationLink"><a href="menu.html" target="_self">Меню</a></li>
-            <li class="navigationMenu__navigationLink"><a href="../index.html" target="_self">О нас</a></li>
-            <li class="navigationMenu__navigationLink"><a href="sales.html" target="_self">Скидки и акции</a></li>
+            <li class="navigationMenu__navigationLink" id="menu"><a href="menu.html" target="_self">Меню</a></li>
+            <li class="navigationMenu__navigationLink" id="index"><a href="../index.html" target="_self">О нас</a></li>
+            <li class="navigationMenu__navigationLink" id="sales"><a href="sales.html" target="_self">Скидки и акции</a></li>
           </ul>
         </nav>
       </div>
