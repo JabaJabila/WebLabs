@@ -54,6 +54,11 @@
     color: crimson;
 }
 
+.navigationMenu__navigationLink_currentPage a {
+    color: var(--main-el-color);
+    font-size: 1.05rem;
+}
+
 .navigationMenu__expandButton {
     margin: 5px;
     font-size: 20px;
