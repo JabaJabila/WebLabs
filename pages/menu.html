@@ -51,19 +51,39 @@
           <div class="meal-block__horizontal-carousel">
             <div class="meal-block__food_frame">
               <img src="../assets/classic.jpg" alt="Классическая">
-              <h3>Классическая</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="classic">Классическая - <span class="meal-block__food_frame_price">200₽</span></h3>
             </div>
             <div class="meal-block__food_frame">
               <img src="../assets/spicy.jpg" alt="Острая">
-              <h3>Острая</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="spicy">Острая - <span class="meal-block__food_frame_price">240₽</span></h3>
             </div>
             <div class="meal-block__food_frame">
               <img src="../assets/arabian.jpg" alt="Арабская">
-              <h3>Арабская</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="arabian">Арабская - <span class="meal-block__food_frame_price">250₽</span></h3>
             </div>
             <div class="meal-block__food_frame">
               <img src="../assets/cheesy.jpg" alt="Арабская">
-              <h3>Сырная</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="cheese">Сырная - <span class="meal-block__food_frame_price">250₽</span></h3>
             </div>
           </div>
         </section>
@@ -73,15 +93,30 @@
           <div class="meal-block__horizontal-carousel">
             <div class="meal-block__food_frame">
               <img src="../assets/fries.jpg" alt="Фри">
-              <h3>Картофель фри</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="fries">Картофель фри - <span class="meal-block__food_frame_price">150₽</span></h3>
             </div>
             <div class="meal-block__food_frame">
               <img src="../assets/wings.jpg" alt="Крылья">
-              <h3>Куриные крылья</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="wings">Куриные крылья - <span class="meal-block__food_frame_price">230₽</span></h3>
             </div>
             <div class="meal-block__food_frame">
               <img src="../assets/stripes.jpg" alt="Стрипсы">
-              <h3>Куриные стрипсы</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="stripes">Куриные стрипсы - <span class="meal-block__food_frame_price">230₽</span></h3>
             </div>
           </div>
         </section>
@@ -91,15 +126,30 @@
           <div class="meal-block__horizontal-carousel">
             <div class="meal-block__food_frame">
               <img src="../assets/cola.jpg" alt="Кола">
-              <h3>Кола</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="cola">Кола 0,5 - <span class="meal-block__food_frame_price">80₽</span></h3>
             </div>
             <div class="meal-block__food_frame">
               <img src="../assets/beer.jpg" alt="Пиво разливное">
-              <h3>Пиво</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="beer">Пиво 0,5 - <span class="meal-block__food_frame_price">130₽</span></h3>
             </div>
             <div class="meal-block__food_frame">
               <img src="../assets/tea.jpg" alt="Чай ассортимент">
-              <h3>Чай</h3>
+              <form class="meal-block__value-button">
+                <div class="meal-block__value-button_button decrease_button" onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input type="number" value="0" />
+                <div class="meal-block__value-button_button increase_button" onclick="increaseValue()" value="Increase Value">+</div>
+              </form>
+              <h3 id="tea">Чай - <span class="meal-block__food_frame_price">60₽</span></h3>
             </div>
           </div>
         </section>
