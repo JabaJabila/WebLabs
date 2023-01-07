@@ -13,6 +13,12 @@
     box-shadow: 0 0 25px 25px whitesmoke;
 }
 
+.meal-block__food_frame_price {
+    font-weight: bold;
+    font-size: 1.02rem;
+    color: var(--keyword-color);
+}
+
 .meal-block__food-category h2 {
     font-weight: bold;
     color: var(--main-el-color);
@@ -52,6 +58,66 @@
     flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.meal-block__value-button {
+    width: 150px;
+    text-align: center;
+    margin: 2px auto;
+    padding-top: 1px;
+}
+
+.meal-block__value-button_button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0;
+    width: 40px;
+    height: 15px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #FF5A33B4;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.decrease_button {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+.increase_button {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+    width: 40px;
+    height: 35px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.meal-block__value-button_button:hover {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
