@@ -53,7 +53,7 @@
 
 .order__container dl dd {
     display: inline;
-    margin: 0;
+    margin-left: 5px;
 }
 .order__container dl dd:after{
     display: block;
@@ -92,7 +92,7 @@
     transform: translateY(4px);
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1700px) {
     .order__order_button {
         visibility: visible;
         height: 50px;
