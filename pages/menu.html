@@ -9,8 +9,9 @@
     <script src="../scripts/navigation_toggle.js"></script>
     <script src="../scripts/page_locator.js"></script>
     <script src="../scripts/order_maker.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../node_modules/toastr/toastr.js"></script>
   </head>
-  <body>
     <header class="mainHeader">
       <div class="mainHeader__logo-and-text">
         <img class="mainHeader__logoImg" src="../assets/logo.jpg" alt="author logo">
@@ -31,15 +32,32 @@
       </div>
     </aside>
 
+    <section class="order__detail-page_hidden" id="details">
+      <button onclick="toDetails(true)">Назад в меню</button>
+      <form onsubmit="return false">
+        <p>Оставить комментарий к заказу:</p>
+        <label>
+          <input type="text" id="order-comment" />
+        </label>
+        <p>Введите телефон для связи и подтверждения заказа:</p>
+        <label>
+          <input type="tel" id="order-phone" />
+        </label>
+        <button id="submit-order" onclick="submitOrder()">Заказать</button>
+      </form>
+    </section>
+
     <main class="menu-page__container">
       <aside class="order">
-        <button class="order__order_button"><span id="order__order_badge">0₽</span><img src="../assets/order.png" alt="order" /></button>
+        <button class="order__order_button" onclick="redirectToOrder()">
+          <span id="order__order_badge">0₽</span>
+          <img src="../assets/order.png" alt="order" /></button>
         <div class="order__container">
           <h2>Ваш заказ:</h2>
           <dl class="order__container-items">
           </dl>
           <span class="order__total">ТУТ ПОКА ПУСТО((</span><br>
-          <button id="make-order">Заказать</button>
+          <button id="make-order" onclick="redirectToOrder()">Заказать</button>
         </div>
       </aside>
 

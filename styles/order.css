@@ -103,6 +103,16 @@
     color: white;
 }
 
+.order__detail-page_active {
+    display: initial;
+    z-index: 3;
+    position: center;
+}
+
+.order__detail-page_hidden {
+    display: none;
+}
+
 @media screen and (max-width: 1700px) {
     .order__order_button {
         visibility: visible;

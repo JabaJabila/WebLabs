@@ -5,6 +5,7 @@
 @import "sale-block.css";
 @import "meals.css";
 @import "order.css";
+@import "../node_modules/toastr/build/toastr.css";
 
 :root {
     --main-bg-color: #FFEC5C;
