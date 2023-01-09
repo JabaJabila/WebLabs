@@ -49,6 +49,7 @@ function generateOrderList(order) {
 
     let totalBlock = document.getElementsByClassName('order__total')[0];
     totalBlock.innerHTML = total === 0 ? 'ТУТ ПОКА ПУСТО((' : 'ИТОГО: ' + total + '₽';
+    document.getElementById('order__order_badge').innerHTML = total + '₽';
 }
 
 function getPositionInfo(position) {

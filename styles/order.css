@@ -53,7 +53,7 @@
 
 .order__container dl dd {
     display: inline;
-    margin-left: 5px;
+    margin-left: 3px;
 }
 .order__container dl dd:after{
     display: block;
@@ -61,7 +61,7 @@
 }
 .order__container dl dt{
     display: inline-block;
-    width: 80%;
+    width: 78%;
 }
 
 .order__container span.order__total {
@@ -92,6 +92,17 @@
     transform: translateY(4px);
 }
 
+#order__order_badge {
+    display: none;
+    position: relative;
+    top: -18px;
+    right: -10px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
 @media screen and (max-width: 1700px) {
     .order__order_button {
         visibility: visible;
@@ -100,9 +111,14 @@
         border-radius: 50px;
     }
 
+    #order__order_badge {
+        display: initial;
+    }
+
     .order__order_button img {
         height: 30px;
         width: 30px;
+        margin-top: -15px;
     }
 
     .order__container { visibility: hidden; }
