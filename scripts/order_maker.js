@@ -1,3 +1,14 @@
+function redirectToOrder() {
+    let order = readOrder();
+    if (!order.order.find(i => i[1] !== '0')) {
+        toastr.warning('Заказ пустой. Выбери, что будешь есть', 'Bruh...',
+            {position: 'topRight', showMethod: 'fadeIn', hideMethod: 'fadeOut', preventDuplicates: true});
+        return;
+    }
+
+    toDetails();
+}
+
 function increaseValue(id) {
     let element = document.getElementById(id).previousElementSibling.children[1];
     let value = parseInt(element.value, 10);
@@ -17,13 +28,14 @@ function decreaseValue(id) {
     updateOrder();
 }
 
-function updateOrder() {
+function updateOrder(toZero = false) {
     let positions = document.getElementsByClassName('meal-block__position');
     for (let position of positions) {
         let element = position.previousElementSibling.children[1];
-        window.localStorage.setItem(position.id, element.value);
+        window.localStorage.setItem(position.id, toZero ? 0 : element.value);
+        if (toZero) element.value = 0;
     }
-    generateOrderList(readOrder());
+    generateOrderList(readOrder().order);
 }
 
 function generateOrderList(order) {
@@ -31,7 +43,7 @@ function generateOrderList(order) {
     list.innerHTML = '';
     let total = 0
 
-    for (let position of order.order) {
+    for (let position of order) {
         let info = getPositionInfo(position);
 
         if (info.amount > 0) {
@@ -78,17 +90,33 @@ function readOrder() {
 }
 
 function submitOrder() {
-    window.localStorage.clear();
-    alert("Спасибо за ваш заказ!");
+    toastr.success('Спасибо за ваш заказ', 'Успех',
+        {position: 'topRight', showMethod: 'slideDown', hideMethod: 'slideUp', preventDuplicates: true});
+    setTimeout(function () {
+        window.localStorage.clear();
+        updateOrder(true);
+        toDetails(true);
+    }, 3000);
 }
 
 function refillOrder() {
     let order = readOrder();
-    generateOrderList(order);
+    generateOrderList(order.order);
 
     for (let item of order.order) {
         document.getElementById(item[0]).previousElementSibling.children[1].value = item[1];
     }
+}
+
+function toDetails(back = false) {
+    let details = document.getElementById('details');
+    if (back) {
+        details.classList.remove('order__detail-page_active');
+        details.classList.add('order__detail-page_hidden');
+        return;
+    }
+    details.classList.remove('order__detail-page_hidden');
+    details.classList.add('order__detail-page_active');
 }
 
 window.addEventListener("load", refillOrder);
