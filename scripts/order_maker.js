@@ -1,7 +1,7 @@
 function redirectToOrder() {
     let order = readOrder();
     if (!order.order.find(i => i[1] !== '0')) {
-        toastr.warning('Заказ пустой. Выбери, что будешь есть', 'Bruh...',
+        toastr.error('Заказ пустой. Выбери, что будешь есть', 'Bruh...',
             {position: 'topRight', showMethod: 'fadeIn', hideMethod: 'fadeOut', preventDuplicates: true});
         return;
     }
