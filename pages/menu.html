@@ -6,6 +6,7 @@
     <title>Don Jabon - МЕНЮ</title>
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
@@ -14,25 +15,7 @@
     <script src="../scripts/page_locator.js"></script>
     <script src="../scripts/order_maker.js"></script>
     <script>
-      $('#make-order').magnificPopup({
-        items: {
-          src: '<div id="details" class="order__detail-popup">\n' +
-                  '      <form onsubmit="return false">\n' +
-                  '        <p>Оставить комментарий к заказу:</p>\n' +
-                  '        <label>\n' +
-                  '          <input type="text" id="order-comment" />\n' +
-                  '        </label>\n' +
-                  '        <p>Введите телефон для связи и подтверждения заказа:</p>\n' +
-                  '        <label>\n' +
-                  '          <input type="tel" id="order-phone" />\n' +
-                  '        </label>\n' +
-                  '        <button id="submit-order" onclick="submitOrder()">Заказать</button>\n' +
-                  '      </form>\n' +
-                  '    </div>',
-          type: 'inline'
-        },
-        closeBtnInside: true
-      });
+
     </script>
   </head>
   <body>
