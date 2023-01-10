@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "css-modal": "^1.5.0",
-    "jQuery": "^1.7.4",
-    "toastr": "^2.1.4"
-  }
-}
