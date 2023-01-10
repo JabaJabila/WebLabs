@@ -1,3 +1,5 @@
+const regex = new RegExp('^\\+79\\d{9}$');
+
 function redirectToOrder() {
     let order = readOrder();
     if (!order.order.find(i => i[1] !== '0')) {
@@ -10,14 +12,22 @@ function redirectToOrder() {
         items: {
             src: '<div id="details" class="order__detail-popup">\n' +
                 '      <form onsubmit="return false">\n' +
-                '        <p>Оставить комментарий к заказу:</p>\n' +
+                '        <p class="popup__main">На данный момент вы можете заказать только для самовывоза.</p>' +
+                '        <p class="popup__main">Мы на карте: <span class="popup__address">г. Санкт-Петербург, Купчинская улица дом 25.</span></p>' +
+                '        <p class="popup__main">В комментарии к заказу можете оставить желаемое время получения заказа.</p>' +
+                '        <p class="popup__main">Оставить комментарий к заказу:</p>\n' +
                 '        <label>\n' +
-                '          <input type="text" id="order-comment" />\n' +
+                '          <textarea class="order__detail-popup-com-input" id="order-comment" placeholder="любые пожелания.." />\n' +
                 '        </label>\n' +
-                '        <p>Введите телефон для связи и подтверждения заказа:</p>\n' +
+                '        <p class="popup__main">Введите телефон для связи и подтверждения заказа:</p>\n' +
                 '        <label>\n' +
-                '          <input type="tel" id="order-phone" />\n' +
-                '        </label>\n' +
+                '          <input maxlength="12" class="order__detail-popup-tel-input" type="tel" id="order-phone" required placeholder="+79219991122"/>\n' +
+                '        </label><br>\n' +
+                '            <dl class="order__container-items-final">' +
+                '           </dl>' +
+                '        <span class="order__total-final"></span>' +
+                '        <br>' +
+                '        <p class="popup__main">Нажимая на кнопку, вас перенаправят на страницу оплаты.</p>' +
                 '        <button id="submit-order" onclick="submitOrder()">Заказать</button>\n' +
                 '      </form>\n' +
                 '    </div>',
@@ -25,6 +35,11 @@ function redirectToOrder() {
         },
         closeBtnInside: true
     });
+
+    generateOrderList(order.order, 'order__container-items-final', 'order__total-final');
+    if (order.order.find(i => i[0] === 'beer' && i[1] !== '0'))
+        toastr.warning('При получении заказа на кассе, вам необходимо будет подтвердить возраст.', 'Внимание',
+            {position: 'topRight', showMethod: 'slideDown', hideMethod: 'slideUp'});
 }
 
 function increaseValue(id) {
@@ -53,11 +68,12 @@ function updateOrder(toZero = false) {
         window.localStorage.setItem(position.id, toZero ? 0 : element.value);
         if (toZero) element.value = 0;
     }
-    generateOrderList(readOrder().order);
+    generateOrderList(readOrder().order, 'order__container-items', 'order__total');
 }
 
-function generateOrderList(order) {
-    let list = document.getElementsByClassName('order__container-items')[0];
+function generateOrderList(order, listClassName, totalClassName) {
+    let list = document.getElementsByClassName(listClassName)[0];
+    console.log(list);
     list.innerHTML = '';
     let total = 0
 
@@ -77,7 +93,7 @@ function generateOrderList(order) {
         }
     }
 
-    let totalBlock = document.getElementsByClassName('order__total')[0];
+    let totalBlock = document.getElementsByClassName(totalClassName)[0];
     totalBlock.innerHTML = total === 0 ? 'ТУТ ПОКА ПУСТО((' : 'ИТОГО: ' + total + '₽';
     document.getElementById('order__order_badge').innerHTML = total + '₽';
 }
@@ -108,6 +124,13 @@ function readOrder() {
 }
 
 function submitOrder() {
+    let validation = regex.exec(document.getElementById('order-phone').value);
+    if (validation == null) {
+        toastr.error('Неверный формат номера телефона', 'Ошибка',
+            {position: 'topRight', showMethod: 'slideDown', hideMethod: 'slideUp', preventDuplicates: true});
+        return;
+    }
+
     toastr.success('Спасибо за ваш заказ', 'Успех',
         {position: 'topRight', showMethod: 'slideDown', hideMethod: 'slideUp', preventDuplicates: true});
 
@@ -120,7 +143,7 @@ function submitOrder() {
 
 function refillOrder() {
     let order = readOrder();
-    generateOrderList(order.order);
+    generateOrderList(order.order, 'order__container-items', 'order__total');
 
     for (let item of order.order) {
         document.getElementById(item[0]).previousElementSibling.children[1].value = item[1];
