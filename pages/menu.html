@@ -5,13 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Don Jabon - МЕНЮ</title>
     <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
     <script src="../scripts/loading_time.js"></script>
     <script src="../scripts/navigation_toggle.js"></script>
     <script src="../scripts/page_locator.js"></script>
     <script src="../scripts/order_maker.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="../node_modules/toastr/toastr.js"></script>
+    <script>
+      $('#make-order').magnificPopup({
+        items: {
+          src: '<div id="details" class="order__detail-popup">\n' +
+                  '      <form onsubmit="return false">\n' +
+                  '        <p>Оставить комментарий к заказу:</p>\n' +
+                  '        <label>\n' +
+                  '          <input type="text" id="order-comment" />\n' +
+                  '        </label>\n' +
+                  '        <p>Введите телефон для связи и подтверждения заказа:</p>\n' +
+                  '        <label>\n' +
+                  '          <input type="tel" id="order-phone" />\n' +
+                  '        </label>\n' +
+                  '        <button id="submit-order" onclick="submitOrder()">Заказать</button>\n' +
+                  '      </form>\n' +
+                  '    </div>',
+          type: 'inline'
+        },
+        closeBtnInside: true
+      });
+    </script>
   </head>
+  <body>
     <header class="mainHeader">
       <div class="mainHeader__logo-and-text">
         <img class="mainHeader__logoImg" src="../assets/logo.jpg" alt="author logo">
@@ -31,21 +55,6 @@
         </nav>
       </div>
     </aside>
-
-    <section class="order__detail-page_hidden" id="details">
-      <button onclick="toDetails(true)">Назад в меню</button>
-      <form onsubmit="return false">
-        <p>Оставить комментарий к заказу:</p>
-        <label>
-          <input type="text" id="order-comment" />
-        </label>
-        <p>Введите телефон для связи и подтверждения заказа:</p>
-        <label>
-          <input type="tel" id="order-phone" />
-        </label>
-        <button id="submit-order" onclick="submitOrder()">Заказать</button>
-      </form>
-    </section>
 
     <main class="menu-page__container">
       <aside class="order">

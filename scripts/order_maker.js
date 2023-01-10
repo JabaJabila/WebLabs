@@ -6,7 +6,7 @@ function redirectToOrder() {
         return;
     }
 
-    toDetails();
+    // toDetails();
 }
 
 function increaseValue(id) {

@@ -113,6 +113,16 @@
     display: none;
 }
 
+.order__detail-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    closeBtnInside: true;
+}
+
 @media screen and (max-width: 1700px) {
     .order__order_button {
         visibility: visible;
