@@ -6,7 +6,25 @@ function redirectToOrder() {
         return;
     }
 
-    // toDetails();
+    $.magnificPopup.open({
+        items: {
+            src: '<div id="details" class="order__detail-popup">\n' +
+                '      <form onsubmit="return false">\n' +
+                '        <p>Оставить комментарий к заказу:</p>\n' +
+                '        <label>\n' +
+                '          <input type="text" id="order-comment" />\n' +
+                '        </label>\n' +
+                '        <p>Введите телефон для связи и подтверждения заказа:</p>\n' +
+                '        <label>\n' +
+                '          <input type="tel" id="order-phone" />\n' +
+                '        </label>\n' +
+                '        <button id="submit-order" onclick="submitOrder()">Заказать</button>\n' +
+                '      </form>\n' +
+                '    </div>',
+            type: 'inline'
+        },
+        closeBtnInside: true
+    });
 }
 
 function increaseValue(id) {
@@ -92,10 +110,11 @@ function readOrder() {
 function submitOrder() {
     toastr.success('Спасибо за ваш заказ', 'Успех',
         {position: 'topRight', showMethod: 'slideDown', hideMethod: 'slideUp', preventDuplicates: true});
+
+    window.localStorage.clear();
+    updateOrder(true);
     setTimeout(function () {
-        window.localStorage.clear();
-        updateOrder(true);
-        toDetails(true);
+        location.reload();
     }, 3000);
 }
 
@@ -106,17 +125,6 @@ function refillOrder() {
     for (let item of order.order) {
         document.getElementById(item[0]).previousElementSibling.children[1].value = item[1];
     }
-}
-
-function toDetails(back = false) {
-    let details = document.getElementById('details');
-    if (back) {
-        details.classList.remove('order__detail-page_active');
-        details.classList.add('order__detail-page_hidden');
-        return;
-    }
-    details.classList.remove('order__detail-page_hidden');
-    details.classList.add('order__detail-page_active');
 }
 
 window.addEventListener("load", refillOrder);
